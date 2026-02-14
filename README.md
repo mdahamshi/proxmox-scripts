@@ -1,6 +1,3 @@
-Absolutely! Based on the collection of scripts you shared, I’ve drafted a **comprehensive, professional GitHub README** for your repository. This README explains the purpose, organization, and usage of your backup/sleep management automation scripts. It’s written to be clear and approachable for other sysadmins or devops engineers.
-
----
 
 # 📦 ZFS & Proxmox Backup Automation Scripts
 
@@ -72,11 +69,12 @@ cd proxmox-scripts
 chmod +x scripts/*.sh 
 ```
 
-3. Add Telegram credentials to `secret/saralab_bot.secret`:
+3. Add Telegram credentials + main pc MAC address to `secret/saralab_bot.secret`:
 
 ```bash
 export TG_BOT_TOKEN="YOUR_BOT_TOKEN"
 export TG_CHAT_ID="-100xxxxxxxxx"
+export WOL_MAC_ADDR="your pc mac address"
 ```
 
 4. Adjust PBS hostname, dataset paths, and directories in `zfs_backup_snap` as needed.
