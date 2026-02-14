@@ -32,7 +32,7 @@ scripts/
 ├── notifications.sh            # Functions for Telegram notifications
 ├── prepare-for-backup.sh       # Prepares PBS & environment before syncing datasets
 ├── wait-for-pbs.sh             # Waits for PBS to become reachable over SSH
-backup.sh                        # Main script to backup Proxmox config + ZFS datasets
+zfs_backup_snap.sh                        # Main script to backup Proxmox config + ZFS datasets
 ```
 
 **Secrets (not committed to GitHub)**
@@ -79,7 +79,7 @@ export TG_BOT_TOKEN="YOUR_BOT_TOKEN"
 export TG_CHAT_ID="-100xxxxxxxxx"
 ```
 
-4. Adjust PBS hostname, dataset paths, and directories in `backup.sh` as needed.
+4. Adjust PBS hostname, dataset paths, and directories in `zfs_backup_snap` as needed.
 
 ---
 
