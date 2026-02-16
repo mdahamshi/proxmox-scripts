@@ -7,7 +7,7 @@ source ~/secret/saralab_bot.secret
 LOCKFILE="/run/zfs-backup.lock"
 START_TIME=$(date +%s)
 
-PBS_HOST="pbs.l"
+PBS_VM="pbs.l"
 PBS_DATA="pbs/data_bkp"
 PBS_VMS="pbs/vms_bkp"
 DATASET_DIR="mmd_server/data"
@@ -89,7 +89,7 @@ SYNCOID_CMD=(
 echo "Syncing datasets to PBS..."
 trap - ERR
 
-"${SYNCOID_CMD[@]}" "$DATASET_DIR" "$PBS_HOST:$PBS_DATA" 2>&1 | tee -a "$LOG_FILE"
+"${SYNCOID_CMD[@]}" "$DATASET_DIR" "$PBS_VM:$PBS_DATA" 2>&1 | tee -a "$LOG_FILE"
 status=${PIPESTATUS[0]}  # exit status of syncoid
 
 trap 'LINE=$LINENO; send_notification "ZFS Backup" "Failed" "Backup failed ❌ at line $LINE"; exit 1' ERR
