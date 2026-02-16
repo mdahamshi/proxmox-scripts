@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
+source ~/secret/saralab_bot.secret
 
 ENABLE_SLEEP_SCRIPT="$HOME/scripts/enable-sleep.sh"
 CHECK_INTERVAL=60
-PBS_SSH="root@main.l"
+
 
 echo "⏳ Waiting for backups and ZFS sync jobs to finish..."
 
@@ -23,5 +24,5 @@ done
 echo "✅ No vzdump or syncoid activity detected."
 echo "➡ Enabling sleep on PBS..."
 
-ssh "$PBS_SSH" "$ENABLE_SLEEP_SCRIPT"
+ssh "$PBS_HOST_SSH" "$ENABLE_SLEEP_SCRIPT"
 echo "✔ Sleep re-enabled."

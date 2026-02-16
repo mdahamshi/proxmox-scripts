@@ -15,7 +15,6 @@ CFG_DIR="/mmd_server/bkp/config"
 VZDUMP_LOCK="/var/run/vzdump.lock"
 LOG_FILE="/var/log/zfs-backup.log"
 PBS_USER="root"
-PBS_SSH="root@main.l"
 
 PREPARE_FOR_BKP="$HOME/scripts/prepare-for-backup.sh"
 
