@@ -143,7 +143,7 @@ PBS_DATA="pbs/data_bkp"
 * Modify PBS host:
 
 ```bash
-PBS_SSH="root@main.l"
+PBS_HOST_SSH="root@main.l"
 ```
 
 * Change sleep duration or intervals in:
