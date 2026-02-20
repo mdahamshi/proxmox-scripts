@@ -29,7 +29,8 @@ scripts/
 ├── notifications.sh            # Functions for Telegram notifications
 ├── prepare-for-backup.sh       # Prepares PBS & environment before syncing datasets
 ├── wait-for-pbs.sh             # Waits for PBS to become reachable over SSH
-zfs_backup_snap.sh                        # Main script to backup Proxmox config + ZFS datasets
+zfs_backup_snap.sh              # Main script to backup Proxmox config + ZFS datasets
+vms-backup-helper.sh            # Run on pve crontab before each PBS job (2 minutes before)
 ```
 
 **Secrets (not committed to GitHub)**
