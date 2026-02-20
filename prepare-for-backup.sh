@@ -5,7 +5,7 @@ set -euo pipefail
 source ~/scripts/wait-for-pbs.sh
 
 RUN_WOL=~/scripts/mmd_wol.sh
-PBS_SSH="root@main.l"
+
 DISABLE_SLEEP_SCRIPT="~/scripts/disable-sleep.sh"
 
 
@@ -13,7 +13,7 @@ DISABLE_SLEEP_SCRIPT="~/scripts/disable-sleep.sh"
 
 disable_pbs_sleep() {
     echo "⛔ Disabling sleep on PBS..."
-    ssh "$PBS_SSH" "$DISABLE_SLEEP_SCRIPT"
+    ssh "$PBS_HOST_SSH" "$DISABLE_SLEEP_SCRIPT"
 }
 
 
